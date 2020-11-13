@@ -11,7 +11,8 @@
 		"prettier": "prettier --write --ignore-unknown --config=.prettierrc.json",
 		"prettier-watch": "onchange \"**/*\" -- npm run prettier {{changed}}",
 		"start": "node server/index",
-		"test": "jest --config=jest.config.json"
+		"test": "jest --config=jest.config.json",
+		"test-watch": "jest --config=jest.config.json --watch"
 	},
 	"author": "",
 	"license": "ISC",
