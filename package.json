@@ -7,7 +7,7 @@
 		"build": "webpack --config=webpack.production.config.js",
 		"dev": "concurrently \"npm run prettier-watch\" \"npm run dev:build\" \"npm run dev:start\"",
 		"dev:build": "webpack --config=webpack.development.config.js --watch --progress",
-		"dev:start": "env-cmd -f ./config/dev.env nodemon server/index",
+		"dev:start": "nodemon server/index",
 		"prettier": "prettier --write --ignore-unknown --config=.prettierrc.json",
 		"prettier-watch": "onchange \"**/*\" -- npm run prettier {{changed}}",
 		"start": "node server/index",
@@ -18,6 +18,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.17.1",
+		"morgan": "^1.10.0",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
